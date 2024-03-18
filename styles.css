@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+nav {
+    display: flex;
+    background-color: #f5f5f5;
+    padding: 10px;
+}
+
+.tab-btn {
+    background-color: #fff;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    margin: 10px;
+    flex-grow: 1;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-btn.active {
+    background-color: #6c63ff;
+    color: #fff;
+}
+
+.tab-btn:hover {
+    background-color: #5a52e2;
+    color: #fff;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+.tab {
+    display: none;
+    width: 100%;
+}
+
+.tab.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ticket-form, .ticket-list, .ticket-print {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 90%; /* Adjusted for better responsiveness */
+    margin: 0 auto; /* Center horizontally */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.category-btns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the buttons */
+    margin-bottom: 20px;
+}
+
+.category-btn {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    flex-grow: 1;
+    margin-right: 0; /* Remove margin-right */
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.category-btn.active {
+    background-color: #6c63ff;
+    color: #fff;
+}
+
+.category-btn:hover {
+    background-color: #5a52e2;
+    color: #fff;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 5px rgba(108, 99, 255, 0.3);
+}
+
+button {
+    background-color: #6c63ff;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-family: inherit;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a52e2;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #f5f5f5;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.delete-btn {
+    background-color: transparent;
+    color: #ff5252;
+    border: 2px solid #6c63ff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100px;
+    text-align: center;
+}
+
+.delete-btn:hover {
+    background-color: #e53935;
+    color: #fff;
+}
+
+.ticket {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.ticket h3 {
+    font-size: 24px;
+    color: #6c63ff;
+    margin-bottom: 20px;
+}
+
+.ticket-details {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.ticket-details p {
+    margin: 5px 0;
+}
+
+.ticket::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-color: #6c63ff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media print {
+    .container {
+        box-shadow: none;
+        height: auto;
+    }
+
+    header, nav, .ticket-form, .ticket-list {
+        display: none;
+    }
+
+    .ticket-print {
+        margin: 0;
+        box-shadow: none;
+        max-width: 100%;
+    }
+}
+
+h1 {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        border-radius: 0;
+    }
+
+    header {
+        border-radius: 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .ticket-form, .ticket-list, .ticket-print {
+        padding: 10px;
+    }
+}

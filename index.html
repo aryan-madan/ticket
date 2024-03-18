@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Web App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>brothers.mela</h1>
+        </header>
+        <nav>
+            <button id="purchaseTabBtn" class="tab-btn active">Purchase Ticket</button>
+            <button id="viewTabBtn" class="tab-btn">View Tickets</button>
+        </nav>
+        <main>
+            <div id="purchaseTab" class="tab active">
+                <div class="ticket-form">
+                    <h2>Purchase Ticket</h2>
+                    <div class="category-btns">
+                        <button id="outsideBtn" class="category-btn">Only Outside</button>
+                        <button id="insideBtn" class="category-btn">Only Inside</button>
+                        <button id="bothBtn" class="category-btn">Inside & Outside</button>
+                        <button id="foodBtn" class="category-btn">Inside & Outside with Food</button>
+                    </div>
+                    <input type="text" id="customerName" placeholder="Customer Name" required>
+                    <input type="text" id="mobileNumber" placeholder="Mobile Number" required>
+                    <button id="purchaseBtn"><i class="fas fa-plus"></i> Purchase</button>
+                </div>
+            </div>
+            <div id="viewTab" class="tab">
+                <div class="ticket-list">
+                    <h2>Purchased Tickets</h2>
+                    <ul id="ticketList"></ul>
+                    <button id="printBtn">Print Ticket</button>
+                </div>
+                <div id="ticketPrint" class="ticket-print">
+                    <div class="ticket">
+                        <h3>Event Ticket</h3>
+                        <div class="ticket-details">
+                            <p><strong>Name:</strong> <span id="printName"></span></p>
+                            <p><strong>Mobile:</strong> <span id="printMobile"></span></p>
+                            <p><strong>Ticket Type:</strong> <span id="printType"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
